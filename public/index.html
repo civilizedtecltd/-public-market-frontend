@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Bangladeshi Largest Consumer to Consumer Online Marketplace."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png"/>
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+    <title>Home | Public Market Bd</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"/>
+
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" type="image/png"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet"/>
+
+    <!-- Select2 -->
+    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+
+    <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet">
+
+    <style>
+        .doorstep-banner {
+            background-color: #463ce5;
+            padding: 15px;
+            width: 85%;
+        }
+
+        .doorstep-banner .row div h4 {
+            color: #ffffff;
+            margin-top: 2%;
+        }
+
+        .doorstep-banner .row div a {
+            margin-left: 80%;
+        }
+
+        .doorstep-banner .row div button:hover {
+            color: #fff;
+        }
+    </style>
+
+
+    <!-- promote add -->
+
+    <style>
+        .banner-ad-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title::before {
+            position: absolute;
+            content: "";
+            background-color: #ff4367;
+            width: 10%;
+            height: 1px;
+            bottom: 0;
+            left: 45%;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .ad-products-box {
+            border: 1px solid #ff4367;
+            border-radius: 7px;
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+        }
+    </style>
+
+
+    <!-- price trips -->
+
+    <style>
+        .banner-ad-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title::before {
+            position: absolute;
+            content: "";
+            background-color: #ff4367;
+            width: 10%;
+            height: 1px;
+            bottom: 0;
+            left: 45%;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .ad-products-box {
+            border: 1px solid #ff4367;
+            border-radius: 7px;
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+        }
+    </style>
+
+
+    <!-- selling trip  -->
+    <style>
+        .banner-ad-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title::before {
+            position: absolute;
+            content: "";
+            background-color: #ff4367;
+            width: 10%;
+            height: 1px;
+            bottom: 0;
+            left: 45%;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .ad-products-box {
+            border: 1px solid #ff4367;
+            border-radius: 7px;
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+        }
+    </style>
+
+
+    <!-- buy sell quick -->
+
+    <style>
+        .banner-ad-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title::before {
+            position: absolute;
+            content: "";
+            background-color: #ff4367;
+            width: 10%;
+            height: 1px;
+            bottom: 0;
+            left: 45%;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .ad-products-box {
+            border: 1px solid #ff4367;
+            border-radius: 7px;
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+        }
+    </style>
+
+
+    <!-- banner adds  -->
+
+    <style>
+        .banner-ad-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .ad-product-title::before {
+            position: absolute;
+            content: "";
+            background-color: #ff4367;
+            width: 10%;
+            height: 1px;
+            bottom: 0;
+            left: 45%;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .ad-products-box {
+            border: 1px solid #ff4367;
+            border-radius: 7px;
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+        }
+
+        .banner-ads-wrapper {
+            background-color: white;
+            border-radius: 7px;
+        }
+
+        .banner-ads-wrapper .advertising-banner-title {
+            font-size: 22px;
+            color: #ff4367;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333333;
+        }
+    </style>
+
+
+    <!-- deshbord  style  -->
+    <style>
+        .item h4 {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .item h6 {
+            color: #fff;
+        }
+
+        .card-4 {
+            background: #c76578;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out 0s;
+            color: #fff;
+        }
+    </style>
+
+
+    <!-- district ads style  -->
+    <style>
+        .top-ad-carousel .carousel-inner {
+            border-radius: 7px;
+            height: 20rem;
+        }
+
+        .mt-50 {
+            margin-top: 50px;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            right: 15%;
+            bottom: 20px;
+            left: 15%;
+            z-index: 10;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .top-ad-carousel .carousel-inner .carousel-item img {
+            height: 20rem;
+            filter: brightness(40%);
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .store-name {
+            color: #ff4367;
+            font-size: 20px;
+            font-weight: 500;
+            padding-bottom: 5px;
+        }
+
+        .product-carousel-title {
+            color: #ffffff;
+            font-size: 35px;
+            padding-bottom: 10px;
+        }
+
+        .product-carousel-price {
+            color: #ff4367;
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 30px;
+        }
+
+        .carousel-caption .auth-dealer-badge, .carousel-caption .verified-seller-badge, .carousel-caption .premium-member-badge {
+            position: absolute;
+            left: 15px;
+            bottom: 5px;
+            margin-left: 0 !important;
+        }
+
+        .auth-dealer-badge {
+            display: inline-block;
+            background-color: #ff4367;
+            padding: 5px 10px 5px 25px;
+            color: #ffffff;
+            border-radius: 7px;
+            margin-left: 30%;
+            position: relative;
+        }
+
+        .auth-dealer-badge i {
+            color: #ffffff;
+            position: absolute;
+            font-size: 25px;
+            left: -18px;
+            bottom: 0;
+            background-color: #fe7c96;
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .carousel-caption .auth-dealer-badge, .carousel-caption .verified-seller-badge, .carousel-caption .premium-member-badge {
+            position: absolute;
+            left: 15px;
+            bottom: 5px;
+            margin-left: 0 !important;
+        }
+
+        .verified-seller-badge {
+            display: inline-block;
+            background-color: #00d1c1;
+            padding: 5px 10px 5px 25px;
+            color: #ffffff;
+            border-radius: 7px;
+            margin-left: 30%;
+            position: relative;
+        }
+
+        .verified-seller-badge i {
+            color: #ffffff;
+            position: absolute;
+            font-size: 25px;
+            left: -18px;
+            bottom: 0;
+            background-color: #8ec2bc;
+            padding: 5px;
+            border-radius: 50%;
+        }
+    </style>
+
+
+    <!-- filter components style  -->
+
+    <style>
+        .top-ad-carousel .carousel-inner {
+            border-radius: 7px;
+            height: 20rem;
+        }
+
+        .mt-50 {
+            margin-top: 50px;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            right: 15%;
+            bottom: 20px;
+            left: 15%;
+            z-index: 10;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .top-ad-carousel .carousel-inner .carousel-item img {
+            height: 20rem;
+            filter: brightness(40%);
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        .store-name {
+            color: #ff4367;
+            font-size: 20px;
+            font-weight: 500;
+            padding-bottom: 5px;
+        }
+
+        .product-carousel-title {
+            color: #ffffff;
+            font-size: 35px;
+            padding-bottom: 10px;
+        }
+
+        .product-carousel-price {
+            color: #ff4367;
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 30px;
+        }
+
+        .carousel-caption .auth-dealer-badge, .carousel-caption .verified-seller-badge, .carousel-caption .premium-member-badge {
+            position: absolute;
+            left: 15px;
+            bottom: 5px;
+            margin-left: 0 !important;
+        }
+
+        .auth-dealer-badge {
+            display: inline-block;
+            background-color: #ff4367;
+            padding: 5px 10px 5px 25px;
+            color: #ffffff;
+            border-radius: 7px;
+            margin-left: 30%;
+            position: relative;
+        }
+
+        .auth-dealer-badge i {
+            color: #ffffff;
+            position: absolute;
+            font-size: 25px;
+            left: -18px;
+            bottom: 0;
+            background-color: #fe7c96;
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .carousel-caption .auth-dealer-badge, .carousel-caption .verified-seller-badge, .carousel-caption .premium-member-badge {
+            position: absolute;
+            left: 15px;
+            bottom: 5px;
+            margin-left: 0 !important;
+        }
+
+        .verified-seller-badge {
+            display: inline-block;
+            background-color: #00d1c1;
+            padding: 5px 10px 5px 25px;
+            color: #ffffff;
+            border-radius: 7px;
+            margin-left: 30%;
+            position: relative;
+        }
+
+        .verified-seller-badge i {
+            color: #ffffff;
+            position: absolute;
+            font-size: 25px;
+            left: -18px;
+            bottom: 0;
+            background-color: #8ec2bc;
+            padding: 5px;
+            border-radius: 50%;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.css"/>
+
+    <style>
+        .mall-slider-handles {
+            margin-top: 50px;
+        }
+
+        .mall-slider-handles {
+            height: 5px !important;
+        }
+
+        .mall-slider-handles > .noUi-base > .noUi-connects > .noUi-connect {
+            background: #ff4367;
+        }
+
+        .mall-slider-handles > .noUi-base > .noUi-handle .noUi-handle-lower {
+            width: 15px !important;
+            height: 31px !important;
+            right: -7px !important;
+            top: -15px !important;
+        }
+
+        .noUi-horizontal .noUi-handle {
+            width: 15px;
+            height: 31px;
+            right: -7px;
+            top: -15px;
+        }
+
+        .noUi-handle:before, .noUi-handle:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 14px;
+            width: 1px;
+            background: #ff4367;
+            left: 3px;
+            top: 6px;
+        }
+
+        .noUi-handle:after {
+            left: 9px;
+            color: #ff4367 !important;
+            background: #ff4367;
+        }
+
+        .noUi-tooltip {
+            display: block;
+            position: absolute;
+            border: 1px solid #ff4367;
+            border-radius: 3px;
+            background: #fff;
+            color: #ff4367;
+            padding: 2px;
+            text-align: center;
+            white-space: nowrap;
+            font-size: 12px;
+        }
+
+        .filter-container-1 {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .filter-container-1 input {
+            border: 1px solid #ddd;
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        .filter-container-1 button {
+            background: #fff;
+            color: #000;
+            padding: 5px 20px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+
+        .filter-container-1 button:hover {
+            background: #ff4367;
+            color: #fff;
+        }
+
+    </style>
+
+
+    <!-- job details  -->
+    <style>
+        .text-center {
+            text-align: center !important;
+        }
+
+        .jobtext p {
+            text-align: center;
+        }
+
+        .jobtext span {
+            color: red;
+        }
+
+        .pt-1, .py-1 {
+            padding-top: 0.25rem !important;
+        }
+
+        .aplon {
+            width: 155px;
+            height: 44px;
+            background-color: #FF4367;
+            color: white !important;
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        .job_summary li {
+            list-style: none;
+            padding-left: 10px;
+            font-size: 14px;
+        }
+
+        .job_summary span {
+            font-weight: bold;
+            font-size: 14px;
+            padding-right: 3px;
+            padding-top: 5px;
+        }
+
+        .mt-4, .my-4 {
+            margin-top: 1.5rem !important;
+        }
+
+        .card-body {
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            padding: 1.25rem;
+        }
+
+        .cardbodystyle li {
+            border-bottom: 1px solid #D8D8D8;
+            list-style: none;
+        }
+
+        .card-body li a {
+            color: #847588;
+            font-size: 14px;
+        }
+
+        .card-body i {
+            padding-right: 5px;
+        }
+
+        .jobsocial li {
+            list-style: none;
+            border-bottom: 0px;
+            float: left;
+            padding-right: 5px;
+            padding-top: 5px;
+        }
+    </style>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js? client=ca-pub-5267492905924396"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+</body>
+</html>
