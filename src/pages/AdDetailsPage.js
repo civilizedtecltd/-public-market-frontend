@@ -257,7 +257,7 @@ const AdDetailsPage = () => {
                                                 </div>
                                             </div>
 
-                                            <ul className="bnav mb-5 ad_details_small_images" id="myTab" role="tablist">
+                                            <ul className="bnav productthmb mb-5 ad_details_small_images" id="myTab" role="tablist">
                                               { getAdDetails?.image_1 &&  (<li className={activeClass === 'image_1' ?'nav-item ad__details__image activeImg': 'nav-item ad__details__image'}>
                                                     {getAdDetails?.image_1 &&
                                                         <img onClick={() => {

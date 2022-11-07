@@ -4020,9 +4020,10 @@ input[type="radio"]:checked::before {
 /* start ad   responsive  */
 
 .ads_card_image .ads_card_image_big{
-  height:200px; 
+  /* height:200px; 
   width:255px;
-  object-fit: cover;
+  object-fit: cover; */
+  width: 100%;
 }
 @media (max-width: 575px) {
    .ad__banner__card{ 
@@ -4319,9 +4320,10 @@ input[type="radio"]:checked::before {
     height: 14rem !important;
    }
 }
-.ad__details__image img{
+
+/* .ad__details__image img{
    height: 120px;
-}
+} */
  
 /* end banner ad responsive  */
 
