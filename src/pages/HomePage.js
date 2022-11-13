@@ -6,7 +6,7 @@ import AdsPricingCard from '../components/Card/AdsPricing/AdsPricingCard';
 import TvcCard from '../components/Card/Tvc/TvcCard';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
-import AdsCard from '../components/Card/Ads/AdsCard';
+import AdNewCard from '../components/Card/Ads/AdNewCard';
 import {getAdCategoryAction, getAllAdAction} from '../redux/action/userProfileAction/profileAdAction';
 import AdsCategoryCard from '../components/Card/Ads/AdsCategoryCard';
 import {getAllTvcAction} from '../redux/action/userProfileAction/profileTvcAction';
@@ -257,7 +257,7 @@ const HomePage = () => {
                     <div className="published_wrapper">
                         <div className="row">
                             {getAllAdSliceData && getAllAdSliceData?.map((allData, i) => (
-                                <AdsCard key={i} allData={allData}/>
+                                <AdNewCard key={i} allData={allData}/>
                             ))}
                         </div>
                         <div className="published_btn">

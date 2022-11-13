@@ -5,7 +5,7 @@ import Footer from "../../../components/Footer/Footer"
 import profile from '../../../asset/frontend/assets/images/default.png'    
 import { getJobCategoryAction ,getJobTypeAction,getJobEducationalAction,postJobSubmitAction,getJobPositionAction} from '../../../redux/action/userProfileAction/profileJobAction';
 import { useNavigate } from 'react-router-dom'; 
-import { getProfileSettingAction } from '../../../redux/action/userProfileAction/profileUpdateAction/profileSettingAction';
+import { getProfileSettingAction } from './../../../redux/action/userProfileAction/profileUpdateAction/profileSettingAction';
 import CategoriesModal from "../../../components/CommonComponents/Modal/CategoriesModal";
 import DivisionAndDistrictModal from "../../../components/CommonComponents/Modal/DivisionAndDistrictModal"; 
 import { getDistrict, getDivision, getJobCategory, getJobCategoryItems, isInvalid } from "../../../Utilities/Utilities";

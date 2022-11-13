@@ -3,7 +3,7 @@ import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import {NavLink, useNavigate, Link, useLocation} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
-import {postLoginSubmitAction} from '../../redux/action/userProfileAction/authAction/authAction';
+import {postLoginSubmitAction} from './../../redux/action/userProfileAction/authAction/authAction';
 import {useForm} from "react-hook-form";
 import DivisionAndDistrictModal from '../../components/CommonComponents/Modal/DivisionAndDistrictModal';
 import EmailWithLogin from '../../components/CommonComponents/AuthModal/EmailWithLogin';

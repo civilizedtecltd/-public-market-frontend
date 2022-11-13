@@ -38,7 +38,7 @@ const AdCreate = () => {
     const [fiveImageStore, setFiveImageStore] = useState(false);
     const [checkAdvertisementVisible, setCheckAdvertisementVisible] = useState(false);
     const firstImageRequried = useRef(null)
-    const [images, setimages] = useState([])
+
     const divisionAndDistrict = getDistrict();
     const subCategory = getSubCategory();
     const adCategory = getAdCategory();
@@ -4188,36 +4188,27 @@ const AdCreate = () => {
         formData.append('user', profileData?.id)
 
         if (firstImageStore != false) {
-            //formData.append('image_1', firstImageStore)
+            formData.append('image_1', firstImageStore)
             setFirstImageCheck('')
-            
-          // images.push(firstImageStore)
         }else{
             setFirstImageCheck('true')
-            //firstImageRequried.current.scrollIntoView()
+            firstImageRequried.current.scrollIntoView()
             return;
         }
         if (secondImageStore != false) {
-            //formData.append('image_2', secondImageStore)
-           // images.push(secondImageStore)
-
+            formData.append('image_2', secondImageStore)
         }
         if (thirdImageStore != false) {
-            //formData.append('image_3', thirdImageStore)
-           // images.push(thirdImageStore)
-
+            formData.append('image_3', thirdImageStore)
         }
         if (forthImageStore != false) {
-            //formData.append('image_4', forthImageStore)
-           // images.push(forthImageStore)
-
+            formData.append('image_4', forthImageStore)
         }
         if (fiveImageStore != false) {
-            //formData.append('image_5', fiveImageStore)
-           // images.push(fiveImageStore)
-
+            formData.append('image_5', fiveImageStore)
         }
-        dispatch(postAdStoreAction(formData,images, navigate))
+
+        dispatch(postAdStoreAction(formData, navigate))
       
     }
     
@@ -4518,8 +4509,6 @@ const AdCreate = () => {
                                                                 <input id="image1" style={{display: "none"}}
                                                                        onChange={(e) => {
                                                                            setFirstImageStore(e.target.files[0]);
-                                                                           setimages([])
-                                                                           setimages([...images,e.target.files[0]])
                                                                            setFirstImagePreview(URL.createObjectURL(e.target.files[0]))
                                                                        }} type="file"
                                                                        accept="image/*"/>
@@ -4575,7 +4564,6 @@ const AdCreate = () => {
                                                             <input id="image2" style={{display: "none"}}
                                                                    onChange={(e) => {
                                                                        setSecondImageStore(e.target.files[0]);
-                                                                       setimages([...images,e.target.files[0]])
                                                                        setSecondImagePreview(URL.createObjectURL(e.target.files[0]))
                                                                    }} type="file"
                                                                    accept="image/*"/>
@@ -4584,7 +4572,6 @@ const AdCreate = () => {
                                                             className={secondImagePreview === false ? 'd-none' : 'd-flex align-items-center justify-content-center h2'}
                                                             onClick={(e) => {
                                                                 setSecondImagePreview(false);
-                                                                setimages([...images,e.target.files[0]])
                                                                 setSecondImageStore(false);
                                                                 document.getElementById("image2").value = null
                                                             }}
@@ -4629,7 +4616,6 @@ const AdCreate = () => {
                                                             <input id="image3" style={{display: "none"}}
                                                                    onChange={(e) => {
                                                                        setThirdImageStore(e.target.files[0]);
-                                                                       setimages([...images,e.target.files[0]])
                                                                        setThirdImagePreview(URL.createObjectURL(e.target.files[0]))
                                                                    }} type="file"
                                                                    accept="image/*"/>
@@ -4683,7 +4669,6 @@ const AdCreate = () => {
                                                             <input id="image4" style={{display: "none"}}
                                                                    onChange={(e) => {
                                                                        setForthImageStore(e.target.files[0]);
-                                                                       setimages([...images,e.target.files[0]])
                                                                        setForthImagePreview(URL.createObjectURL(e.target.files[0]))
                                                                    }} type="file"
                                                                    accept="image/*"/>
@@ -4737,7 +4722,6 @@ const AdCreate = () => {
                                                             <input id="image5" style={{display: "none"}}
                                                                    onChange={(e) => {
                                                                        setFiveImageStore(e.target.files[0]);
-                                                                       setimages([...images,e.target.files[0]])
                                                                        setFiveImagePreview(URL.createObjectURL(e.target.files[0]))
                                                                    }} type="file"
                                                                    accept="image/*"/>

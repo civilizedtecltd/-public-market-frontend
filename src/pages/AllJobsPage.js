@@ -3,7 +3,7 @@ import Header from '../components/Header/Header';
 import JobFilter from '../components/Job/JobFilter';
 import AllJob from '../components/Job/AllJob';
 import Footer from '../components/Footer/Footer';
-import PaginateCustom from '../components/Paginate/PaginateCustom';
+import PaginateCustom from './../components/Paginate/PaginateCustom';
 import { useDispatch } from 'react-redux';
 import { getPaginationAction } from '../redux/action/paginationAction';
 import BannerAdShowLeft from '../components/BannerAdComponets/BannerAdShowLeft';

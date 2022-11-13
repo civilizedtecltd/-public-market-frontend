@@ -4,7 +4,7 @@ import { useDispatch ,useSelector} from 'react-redux';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header'; 
 import { getAllTvcAction } from '../redux/action/userProfileAction/profileTvcAction';
-import TvcCard from '../components/Card/Tvc/TvcCard';
+import TvcCard from './../components/Card/Tvc/TvcCard';
 import PaginateCustom from '../components/Paginate/PaginateCustom';
 import { languageCheck } from '../helpers/Helpers';
 import BannerAdShowTop from '../components/BannerAdComponets/BannerAdShowTop';

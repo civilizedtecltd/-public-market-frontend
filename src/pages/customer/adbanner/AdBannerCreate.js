@@ -3,10 +3,10 @@ import { useDispatch,useSelector } from 'react-redux';
 import Header from '../../../components/Header/Header';
 import Footer from '../../../components/Footer/Footer'; 
 import UserSidebar from '../../../components/UserSidebar';
-import { getProfileSettingAction } from '../../../redux/action/userProfileAction/profileUpdateAction/profileSettingAction'; 
+import { getProfileSettingAction } from './../../../redux/action/userProfileAction/profileUpdateAction/profileSettingAction'; 
 import Swal from 'sweetalert2';  
-import { postAdBannerSubmitAction } from '../../../redux/action/userProfileAction/profileAdBannerAction';
-import { getAdBannerCategoryAction } from '../../../redux/action/commonsAction/commonsAction';
+import { postAdBannerSubmitAction } from './../../../redux/action/userProfileAction/profileAdBannerAction';
+import { getAdBannerCategoryAction } from './../../../redux/action/commonsAction/commonsAction';
  
 import profile from '../../../asset/frontend/assets/images/default.png'   
 import CategoriesModal from "../../../components/CommonComponents/Modal/CategoriesModal";

@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header'; 
 import UserSidebar from '../../../components/UserSidebar';
 import TvcTables from '../../../components/Tvc/TvcTables'; 
-import PaginateCustom from '../../../components/Paginate/PaginateCustom';
+import PaginateCustom from './../../../components/Paginate/PaginateCustom';
 import { useSelector } from "react-redux";
 
 import {languageCheck} from "../../../helpers/Helpers";

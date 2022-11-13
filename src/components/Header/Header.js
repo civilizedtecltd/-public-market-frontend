@@ -74,6 +74,7 @@ const Header = (props) => {
         try {
             const response = (await axios.get('/core/navbar/'))?.data
             if (response) {
+                console.log(response);
                 setAdCountInfo(response)
             }
         } catch (err) {

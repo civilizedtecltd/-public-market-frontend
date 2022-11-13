@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import Header from "../../../components/Header/Header"
 import Footer from "../../../components/Footer/Footer"  
 import UserSidebar from '../../../components/UserSidebar';
-import AdBannerTables from '../../../components/AdBanner/AdBannerTables'; 
-import PaginateCustom from '../../../components/Paginate/PaginateCustom';
+import AdBannerTables from './../../../components/AdBanner/AdBannerTables'; 
+import PaginateCustom from './../../../components/Paginate/PaginateCustom';
 import { getAdBannerCategoryAction } from "../../../redux/action/commonsAction/commonsAction";
 import { useDispatch, useSelector } from "react-redux";
 import CategoriesModal from "../../../components/CommonComponents/Modal/CategoriesModal";

@@ -1,93 +1,80 @@
 import React, { useState, useEffect, useRef, useImperativeHandle } from "react";
-import { useDispatch, useSelector } from 'react-redux';
-import { getDistrictAction, getDivisionAction } from "../../redux/action/coreAction";
-import { getAdCategoryAction, getAdSubCategoryAction } from "../../redux/action/userProfileAction/profileAdAction";
 import { getAdCategoryItems, getAdSubCategoryItems, getDistrictItems, getDivisionItems, isInvalid } from "../../Utilities/Utilities";
 import { languageCheck } from "../../helpers/Helpers";
+import { getDistrictRequest, getDivisionRequest } from "../../redux/action/coreAction";
+import { getAdCategoryRequest, getAdSubCategoryRequest } from "../../redux/action/userProfileAction/profileAdAction";
 
 const AdFilter = React.forwardRef((props, ref) => {
-    const dispatch = useDispatch();
-
     const refCategory = useRef();
     const refDivision = useRef();
     const refDistrict = useRef();
     const refSubCategory = useRef();
 
+    const [allDivisions, setAllDivisions] = useState([]);
+    const [allDistricts, setAllDistricts] = useState([]);
+    const [allCategories, setAllCategories] = useState([]);
+    const [allSubCategories, setSubAllCategories] = useState([]);
+
     const [districts, setDistricts] = useState([]);
+    const [subCategories, setSubCategories] = useState([]);
 
-    // call all reducer
-    const { getAllAdsCategory } = useSelector(state => state.getAdCategoryReducer);
+    let _allDivisions = getDivisionItems();
+    let _allDistricts = getDistrictItems();
+    let _allCategories = getAdCategoryItems();
+    let _allSubCategories = getAdSubCategoryItems();
+
+    const init = () => {
+        setAllDivisions(_allDivisions);
+        setAllDistricts(_allDistricts);
+        setAllCategories(_allCategories);
+        setSubAllCategories(_allSubCategories);
+        setDistricts(_allDistricts?.filter(x => x.division === props.getDivisionDefaultValue) || []);
+        setSubCategories(_allSubCategories?.filter(x => x.ad_category === props.getAdCategoryDefaultValue) || []);
+    }
 
     useEffect(() => {
-        if (getAllAdsCategory) {
-            dispatch(getAdCategoryAction());
+        if (isInvalid(_allDivisions)
+            || isInvalid(_allDistricts)
+            || isInvalid(_allCategories)
+            || isInvalid(_allSubCategories)) {
+            Promise.all([
+                getDivisionRequest(),
+                getDistrictRequest(),
+                getAdCategoryRequest(),
+                getAdSubCategoryRequest(),
+            ]).then(() => {
+                _allDivisions = getDivisionItems();
+                _allDistricts = getDistrictItems();
+                _allCategories = getAdCategoryItems();
+                _allSubCategories = getAdSubCategoryItems();
+                init();
+            });
         }
-    }, [dispatch]);
-
-    useEffect(() => {
-        dispatch(getAdSubCategoryAction());
-    }, [dispatch]);
-
-    useEffect(() => {
-        setDistricts(districtItemLocal?.filter(x => x.division === props.getDivisionDefaultValue) || []);
-    }, [props.getDivisionDefaultValue]);
-
-    const getAllAdsCategoryLocal = getAdCategoryItems();
-    const getAllAdsSubCategoryLocal = getAdSubCategoryItems();
-
-    const { divisionItem } = useSelector(state => state.getDivisionReducer);
-    const divisionItemLocal = getDivisionItems();
-
-    useEffect(() => {
-        if (isInvalid(divisionItemLocal)) {
-            dispatch(getDivisionAction());
+        else {
+            init();
         }
-    }, [dispatch, divisionItem]);
-
-    const { districtItem } = useSelector(state => state.getDistrictReducer);
-    const districtItemLocal = getDistrictItems();
-
-    useEffect(() => {
-        if (isInvalid(districtItemLocal)) {
-            dispatch(getDistrictAction());
-        }
-    }, [dispatch, districtItem])
-
-    const adSubCategoryItems = getAllAdsSubCategoryLocal && getAllAdsSubCategoryLocal?.filter(x => x.ad_category === props?.adCategory || x.ad_category === props.getAdCategoryDefaultValue);
-    const districtActiveId = districtItemLocal?.find(x => x.id === props.getLocationData?.state?.id);
+    }, []);
 
     const onChange = (key, value) => {
         if (props?.onChange) props?.onChange(key, value);
     }
 
-    useEffect(() => {
-        if (props?.getLocationData?.state?.id) {
-            props.setDivisionDefaultValue(props?.getLocationData?.state?.id);
-        }
-    }, [props?.getLocationData]);
-
-    useEffect(() => {
-        if (districtActiveId?.division) {
-            props.setDistrictDefaultValue(districtActiveId?.division);
-            props.setDistrictDefaultValue(props?.getLocationData?.state?.id);
-        }
-    }, [props?.getLocationData?.state?.id]);
-
     const handleCategory = (event) => {
         const categoryId = event.target.value;
         props.setAdCategoryDefaultValue(categoryId);
-        const routeCategory = getAllAdsCategoryLocal && getAllAdsCategoryLocal.find((y) => y.id === event.target.value);
+        const routeCategory = allCategories && allCategories.find((y) => y.id === categoryId);
         onChange('ad_category', {
             value: categoryId,
             title: routeCategory?.name || ""
         });
+        setSubCategories(allSubCategories?.filter(x => x.ad_category === categoryId) || []);
         props.setToggleCategory(x => !x);
     }
 
     const handleSubCategory = (event) => {
         const subCategoryId = event.target.value;
         props.setAdSubCategoryDefaultValue(subCategoryId);
-        const routeSubCategory = adSubCategoryItems && adSubCategoryItems.find((y) => y.id === event.target.value);
+        const routeSubCategory = subCategories && subCategories.find((y) => y.id === subCategoryId);
         onChange('ad_sub_category', {
             value: subCategoryId,
             title: routeSubCategory?.name || ""
@@ -96,13 +83,14 @@ const AdFilter = React.forwardRef((props, ref) => {
     }
 
     const handleDivision = (event) => {
-        const divisionID = event.target.value;
-        props.setDivisionDefaultValue(divisionID);
-        const routeDivision = divisionItemLocal && divisionItemLocal.find((y) => y.id === event.target.value);
+        const divisionId = event.target.value;
+        props.setDivisionDefaultValue(divisionId);
+        const routeDivision = allDivisions && allDivisions.find((y) => y.id === divisionId);
         onChange('division', {
-            value: divisionID,
+            value: divisionId,
             title: routeDivision?.name || ""
         });
+        setDistricts(allDistricts?.filter(x => x.division === divisionId) || []);
         props.setToggleCategory(x => !x);
     }
 
@@ -136,7 +124,7 @@ const AdFilter = React.forwardRef((props, ref) => {
                         <select ref={refCategory} value={props.getAdCategoryDefaultValue}
                             onChange={(e) => handleCategory(e)} className="form-control w-100">
                             <option value="">{languageCheck() === 'bn' ? "ক্যাটাগরি" : "Category"}</option>
-                            {getAllAdsCategoryLocal && getAllAdsCategoryLocal?.map(x => (
+                            {allCategories && allCategories?.map(x => (
                                 <option key={x.id} value={x.id}> {x.name}</option>
                             ))}
                         </select>
@@ -145,7 +133,7 @@ const AdFilter = React.forwardRef((props, ref) => {
                         <select ref={refSubCategory} value={props.getAdSubCategoryDefaultValue}
                             onChange={(e) => handleSubCategory(e)} className="form-control w-100">
                             <option value="">{languageCheck() === 'bn' ? "সাব ক্যাটাগরি" : "Sub Cetegory"}</option>
-                            {adSubCategoryItems && adSubCategoryItems?.map(x => (
+                            {subCategories && subCategories?.map(x => (
                                 <option key={x.id} value={x.id}> {x.name}</option>
                             ))}
                         </select>
@@ -154,7 +142,7 @@ const AdFilter = React.forwardRef((props, ref) => {
                         <select ref={refDivision} value={props.getDivisionDefaultValue}
                             onChange={(e) => handleDivision(e)} className="form-control w-100">
                             <option value="">{languageCheck() === 'bn' ? "বিভাগ" : "Division"}</option>
-                            {divisionItemLocal && divisionItemLocal?.map(x => (
+                            {allDivisions && allDivisions?.map(x => (
                                 <option key={x.id} value={x.id}>{x.name}</option>
                             ))}
                         </select>

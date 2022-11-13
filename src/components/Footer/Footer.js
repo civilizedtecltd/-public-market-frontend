@@ -10,7 +10,7 @@ import youtube from "../../asset/frontend/assets/images/social_media_icon/youtub
 import sslBanner from "../../asset/frontend/assets/images/ssl-banner2.jpg"
 import appStore from "../../asset/frontend/assets/images/app-store1.png"
 import appStore2 from "../../asset/frontend/assets/images/app-store2.png"
-import basis from "../../asset/frontend/assets/images/StaticImage/basis.png"
+import basis from "../../asset/frontend/assets/images/StaticImage/BASIS.png"
 import {allLocalStorageRemove, languageCheck} from "../../helpers/Helpers";
 import moment from 'moment'
 

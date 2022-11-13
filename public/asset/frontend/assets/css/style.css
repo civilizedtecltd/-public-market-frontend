@@ -7184,3 +7184,65 @@ p {
     display: inline-block !important;
     margin-right: 10px;
 }
+
+
+/*-----rayhen--------*/
+
+.ad_card_thambail {
+    /* display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255); */
+    height: 200px;
+    width: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+
+.ads_card_image .ads_card_image_thambail{
+    margin: auto;
+}
+
+.contain_img{
+    max-width: 100%;
+    object-fit: contain !important;
+}
+
+.bnav{
+    
+    width: 100%;
+    /* background-color: #FF4367; */
+    position: relative;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.payment-image-card{
+    padding: 0 2px;
+    width: 30%;
+    height: 90px;
+    background-color: #efefef;
+    border: 1px solid #c2bfbf;
+    margin-right: 5px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.payment-image{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+@media only screen and (max-width: 579px){
+    .single_ads_card.ads_list .ad_card_thambail_big{
+        height: auto;
+        width: auto;
+    }
+}
+

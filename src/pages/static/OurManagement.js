@@ -1,9 +1,9 @@
 import React from 'react'; 
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer'; 
-import MD from '../../asset/frontend/assets/images/StaticImage/Md-Ahsan-Habib-Hirak-Managing-Director.png' 
-import CHAIRMAN from '../../asset/frontend/assets/images/StaticImage/Md-Sirajul-Haque-Chairman.png' 
-import DIRECTOR from '../../asset/frontend/assets/images/StaticImage/Mohammad-Kamruzzaman-Director.png' 
+import MD from './../../asset/frontend/assets/images/StaticImage/Md-Ahsan-Habib-Hirak-Managing-Director.png' 
+import CHAIRMAN from './../../asset/frontend/assets/images/StaticImage/Md-Sirajul-Haque-Chairman.png' 
+import DIRECTOR from './../../asset/frontend/assets/images/StaticImage/Mohammad-Kamruzzaman-Director.png' 
 import { languageCheck } from '../../helpers/Helpers';
 
 

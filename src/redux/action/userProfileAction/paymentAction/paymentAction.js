@@ -5,7 +5,6 @@ export const getPaymentAction = (id) =>async (dispatch)=>{
     dispatch({type: 'GET_PAYMENT_REQUEST'});  
     try{
        const response = (await axios.get("payment/info/"+id+"/",{headers:{"Authorization":"token "+token}})).data 
-       console.log(response);
        dispatch({type: 'GET_PAYMENT_SUCCESS' ,payload : response});
     }catch(err){
        dispatch({type: 'GET_PAYMENT_ERROR' ,payload : err}); 

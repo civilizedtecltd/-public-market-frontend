@@ -7,8 +7,8 @@ import UserSidebar from '../../../components/UserSidebar';
 import Swal from 'sweetalert2';
 import {ClipLoader} from 'react-spinners';
 import { getEditAdBannerAction } from "../../../redux/action/userProfileAction/profileAdBannerAction";
-import { getAdBannerCategoryAction } from '../../../redux/action/commonsAction/commonsAction';
-import { patchUpdateAdBannerAction } from '../../../redux/action/userProfileAction/profileAdBannerAction';
+import { getAdBannerCategoryAction } from './../../../redux/action/commonsAction/commonsAction';
+import { patchUpdateAdBannerAction } from './../../../redux/action/userProfileAction/profileAdBannerAction';
 import CategoriesModal from "../../../components/CommonComponents/Modal/CategoriesModal";
 import { getAdBannerCategory, getAdBannerCategoryItems, isInvalid } from "../../../Utilities/Utilities";
  

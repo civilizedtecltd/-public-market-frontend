@@ -5,7 +5,7 @@ import  Moment  from 'react-moment';
 import pmImage from "../../../asset/frontend/assets/images/logo/small-logo.png"
 import { capitalizeFirst, languageCheck, titlecConvertToSlug } from '../../../helpers/Helpers';
 
-const AdsCard = ({allData}) => { 
+const AdsNewCard = ({allData}) => { 
     
      
     return ( 
@@ -15,8 +15,8 @@ const AdsCard = ({allData}) => {
              state={{type: 'ad_category', id: allData?.ad_category }}
              >
                 <div className="single_ads_card mt-30" >
-                        <div className="ads_card_image d-flex justify-content-center custom_ad_card_for_home_page">
-                            <img src={allData.image_1} className="ads_card_image_big"  alt="ads"/>
+                        <div className="ad_card_thambail ads_card_image d-flex justify-content-center ">
+                        {allData.image_1 ? <img src={allData.image_1} className="ads_card_image_thambail contain_img"  alt="ads"/> : <img src={allData.resize_image[0].thumbnail} className="ads_card_image_thambail contain_img"  alt="ads"/>  }  
                                 <span style={{position: 'absolute',
                                         height: '2rem',
                                         width: '5.5rem',
@@ -50,4 +50,4 @@ const AdsCard = ({allData}) => {
     );
 };
 
-export default AdsCard;
+export default AdsNewCard;

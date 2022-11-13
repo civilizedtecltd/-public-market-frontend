@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useImperativeHandle } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { getJobCategoryAction } from '../../redux/action/userProfileAction/profileJobAction';
-import { getDivisionAction, getDistrictAction } from '../../redux/action/coreAction';
+import { getJobCategoryAction } from './../../redux/action/userProfileAction/profileJobAction';
+import { getDivisionAction, getDistrictAction } from './../../redux/action/coreAction';
 import { getDistrictItems, getDivisionItems, getJobCategoryItems, isInvalid } from "../../Utilities/Utilities";
 import { languageCheck } from "../../helpers/Helpers";
 

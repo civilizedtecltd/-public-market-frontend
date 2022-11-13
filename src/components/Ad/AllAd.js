@@ -8,7 +8,7 @@ const AllAd = ({allData}) => {
         <>
             <div className="single_ads_card ads_list d-sm-flex mt-30"> 
                <Link className="like" to={"/ad/details/"+titlecConvertToSlug(allData?.title)+"/"+allData?.id+"/"}> 
-                <div className="ads_card_image">
+               <div className="ad_card_thambail_big">
                     {allData.image_1 ?   <img src={allData.image_1} className="ads_img" alt="ads" /> :   <img src={allData.resize_image[0].cardImage} className="ads_img" alt="ads" />  }
                   
                 </div>

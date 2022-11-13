@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';   
 import AdsCategoryCard from '../components/Card/Ads/AdsCategoryCard';
-import PaginateCustom from '../components/Paginate/PaginateCustom';
+import PaginateCustom from './../components/Paginate/PaginateCustom';
 import axios from 'axios';
 import { languageCheck } from '../helpers/Helpers';
 import BannerAdShowTop from '../components/BannerAdComponets/BannerAdShowTop';

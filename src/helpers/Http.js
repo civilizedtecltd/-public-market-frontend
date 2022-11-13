@@ -4,7 +4,7 @@ const version = "v2";
 
 const envMap = {
     production: process.env.REACT_APP_PRO_MODE,
-    development: process.env.REACT_APP_LOCAL_MODE
+    development: process.env.REACT_APP_DEV_MODE
 }
 // console.log(window.location.hostname)
 const lang = languageCheck() || "en";

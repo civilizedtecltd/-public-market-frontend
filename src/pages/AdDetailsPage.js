@@ -300,7 +300,6 @@ const AdDetailsPage = () => {
                                                     
                                                }
                                             </ul>
-                                         
                                         </div>
                                         <br />
 

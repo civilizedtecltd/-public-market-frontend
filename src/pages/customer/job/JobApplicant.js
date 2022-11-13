@@ -5,7 +5,7 @@ import Header from "../../../components/Header/Header"
 import Footer from "../../../components/Footer/Footer"  
 import UserSidebar from '../../../components/UserSidebar';   
 import JobTables from '../../../components/Job/JobTables';
-import PaginateCustom from '../../../components/Paginate/PaginateCustom';  
+import PaginateCustom from './../../../components/Paginate/PaginateCustom';  
 import { getJobCategoryAction } from "../../../redux/action/userProfileAction/profileJobAction";
   
 import {languageCheck} from "../../../helpers/Helpers";

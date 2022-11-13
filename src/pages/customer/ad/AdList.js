@@ -5,7 +5,7 @@ import AdTables from "../../../components/Ad/AdTables";
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header'; 
 import UserSidebar from "../../../components/UserSidebar";
-import PaginateCustom from '../../../components/Paginate/PaginateCustom'; 
+import PaginateCustom from './../../../components/Paginate/PaginateCustom'; 
  
 import {languageCheck} from "../../../helpers/Helpers";
  

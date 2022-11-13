@@ -2,9 +2,9 @@ import React from 'react';
 
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer'; 
-import LeaderBoard from '../../asset/frontend/assets/images/StaticImage/leader-board.png'
-import SkyScraper from '../../asset/frontend/assets/images/StaticImage/sky-scraper.png' 
-import BaseLine from '../../asset/frontend/assets/images/StaticImage/bottom-border.png' 
+import LeaderBoard from './../../asset/frontend/assets/images/StaticImage/leader-board.png'
+import SkyScraper from './../../asset/frontend/assets/images/StaticImage/sky-scraper.png' 
+import BaseLine from './../../asset/frontend/assets/images/StaticImage/bottom-border.png' 
 import { languageCheck } from '../../helpers/Helpers';
 
 

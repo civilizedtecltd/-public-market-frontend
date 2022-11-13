@@ -152,20 +152,20 @@ const Payment = () => {
 
                              {getPayments?.ad === null ? "" : <div className="ad__card_title d-flex shadow-sm p-2  mt-3 bg-white rounded">
                                <div className="card__image_payment">
-                                  {
+                               {
                                   
                                   getPayments?.ad?.image_1 ? <img height="65px" className='mr-4'
                                   width="90px" src={getPayments?.ad?.image_1} alt="profile" /> :  
 
                                   getPayments.ad.resize_image ? <img height="65px" className='mr-4'
-                                  width="90xpx" src={getPayments?.ad?.resize_image[0].cardImage} alt="profile" /> : 
+                                  width="90xpx" src={getPayments?.ad?.resize_image[0].featuredImage} alt="profile" /> : 
                                   <img height="65px" className='mr-4'
                                   width="90px"  src={profile} alt="profile" />
                                   
                                   
                                   }
                                </div>
-                               <div className="card__title_payment mt-1 pl-1">
+                               <div className="card__title_payment mt-1">
                                 <h5>{getPayments?.ad?.title}</h5> 
                                 <p style={{fontSize:'14px'}}>{getPayments?.district},{getPayments?.ad?.address}</p> 
                                 <span>Tk {getPayments?.ad?.price / 1.00}</span> 
@@ -229,18 +229,3 @@ const Payment = () => {
 };
 
 export default Payment;
-
-
-// {getPayments?.ad === null ? "" : <div className="ad__card_title d-flex shadow-sm p-2  mt-3 bg-white rounded">
-//                                <div className="card__image_payment payment-image-card mr-1">
-//                                   {
-                                  
-//                                   getPayments?.ad?.image_1 ? <img className='payment-image'
-//                                    src={getPayments?.ad?.image_1} alt="profile" /> :  
-
-//                                   getPayments.ad.resize_image ? <img height="65px" className='payment-image' src={getPayments?.ad?.resize_image[0].cardImage} alt="profile" /> : 
-//                                   <img className='payment-image'
-//                                     src={profile} alt="profile" />
-                                  
-                                  
-//                                   }

@@ -3,7 +3,7 @@ import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'; 
-import { postForgetPasswordVerifySubmitAction, postResetPasswordSubmitAction } from '../../redux/action/userProfileAction/authAction/authAction';
+import { postForgetPasswordVerifySubmitAction, postResetPasswordSubmitAction } from './../../redux/action/userProfileAction/authAction/authAction';
 import { useForm } from "react-hook-form";
 import { languageCheck, numberCheck } from '../../helpers/Helpers';
 import ForgetPasswordModal from '../../components/CommonComponents/AuthModal/ForgetPasswordModal';

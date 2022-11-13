@@ -1,5 +1,5 @@
 import axios from "axios";
-import { successMessage } from "../../Hooks/MessageHandling";
+import { successMessage } from "./../../Hooks/MessageHandling";
 
 export const getPaginationAction = (path, limit, offset, params) => async dispatch => {
     params = params || {};

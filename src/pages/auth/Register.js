@@ -6,8 +6,8 @@ import {useDispatch, useSelector} from 'react-redux';
 import {
     postRegisterSubmitAction,
     postRegisterVerifySubmitAction
-} from '../../redux/action/userProfileAction/authAction/authAction';
-import {getDivisionAction, getDistrictAction} from '../../redux/action/coreAction';
+} from './../../redux/action/userProfileAction/authAction/authAction';
+import {getDivisionAction, getDistrictAction} from './../../redux/action/coreAction';
 import {useForm} from "react-hook-form";  
 import DivisionAndDistrictModal from '../../components/CommonComponents/Modal/DivisionAndDistrictModal'; 
 import {getDistrict, getDivision} from '../../Utilities/Utilities';
